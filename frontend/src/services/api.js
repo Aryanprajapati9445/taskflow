@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/v1';
+const API_BASE = import.meta.env.VITE_API_URL;
 
 const api = axios.create({
   baseURL: API_BASE,
@@ -18,6 +18,7 @@ api.interceptors.request.use((config) => {
 
 // ── Response interceptor: handle 401 + auto-refresh ──
 api.interceptors.response.use(
+
   (response) => response,
   async (error) => {
     const originalRequest = error.config;
