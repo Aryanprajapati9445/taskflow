@@ -89,12 +89,23 @@ app.use((req, res, next) => {
 });
 
 // ──────────────────────────────────────
-// API Documentation
+// Root Route & API Documentation
 // ──────────────────────────────────────
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
+app.get('/', (req, res) => {
+  res.redirect('/api-docs');
+});
+
+const swaggerUiOptions = {
   customCss: '.swagger-ui .topbar { display: none }',
   customSiteTitle: 'Task Manager API Docs',
-}));
+  customCssUrl: 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui.min.css',
+  customJs: [
+    'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-bundle.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-standalone-preset.js'
+  ]
+};
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, swaggerUiOptions));
 
 // ──────────────────────────────────────
 // API Routes (versioned)
