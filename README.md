@@ -1,5 +1,10 @@
 # TaskFlow — Scalable REST API with Authentication & RBAC
 
+
+swagger docs : https://taskflow-euuj.onrender.com/api-docs/
+
+web url : https://taskflow-tan-phi.vercel.app/
+
 A production-ready REST API built with **Node.js**, **Express**, and **MongoDB**, featuring JWT authentication, role-based access control, full CRUD operations, and a React frontend.
 
 ## 🏗️ Architecture
@@ -104,7 +109,7 @@ npm run seed:admin            # Creates admin from .env credentials
 
 Default admin credentials (change in `.env`):
 - **Email:** `admin@taskflow.com`
-- **Password:** `Admin@123`
+
 
 Once the first admin exists, they can promote other users via:
 - **Admin Panel UI** → Users tab → Role dropdown
