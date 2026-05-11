@@ -56,7 +56,7 @@ docker compose up --build     # Starts MongoDB + Backend + Frontend
 
 ## 📚 API Documentation
 
-Interactive Swagger docs available at: **http://localhost:5000/api-docs**
+Interactive Swagger docs available at: **https://taskflow-euuj.onrender.com/api-docs/**
 
 ### Endpoints Overview
 
@@ -118,7 +118,7 @@ Once the first admin exists, they can promote other users via:
 ## 🧪 Testing
 
 1. Run `npm run seed:admin` to create the admin user
-2. Visit **http://localhost:5000/api-docs** for interactive API testing
+2. Visit **https://taskflow-euuj.onrender.com/api-docs/** for interactive API testing
 3. Login with admin credentials → Use the returned JWT in the Authorize button
 4. Register a regular user via the frontend → Login → Test CRUD on tasks
 5. Login as admin → Open Admin Panel → Manage users and view all tasks

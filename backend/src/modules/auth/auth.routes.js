@@ -152,7 +152,7 @@ router.post('/register', validate(registerValidation), authController.register);
  *                 example: admin@taskflow.com
  *               password:
  *                 type: string
- *                 example: Admin@123
+ *                 example: YourSecurePassword!
  *     responses:
  *       200:
  *         description: Login successful, returns tokens and user info
